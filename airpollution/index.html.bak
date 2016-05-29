@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Air Pollution | NECTEC</title>
+    
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconbar.css">
+    
+    <!--icon font-->
+    <link rel="stylesheet" href="path/font-awesome-4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <img class="nav-logo" src="img/nectec-logo.jpg">
+    </nav>
+    
+    <div id="container" class="container contaniner-main bg-red">
+        <div id="icon-sunny"><img src="img/silhouette.png"></div>
+        <div id="icon-cloudy"><img src="img/sky.png"></div>
+        
+        <p class="text-display2">Air Pollution</p>
+        <p class="text-headline">แอปพลิเคชัน<br>ตรวจสอบมลพิษในอากาศ</p>
+        <br>
+        <img class="emoji" src="img/flower-smile.png">
+        <br>
+        <br>
+        <a href="login.html"><input class="btn" value="เข้าใช้งาน"></a>
+    </div><!--/.container-->
+</body>
+    
+    <!--jquery-->
+    <script src="js/jquery-2.2.2.min.js"></script>
+    
+    <!--js-->
+    <script src="js/script.js"></script>
+</html>

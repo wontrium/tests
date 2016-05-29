@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Air Pollution | NECTEC</title>
+    
+    <!--css-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/iconbar.css">
+    
+    <!--icon font-->
+    <link rel="stylesheet" href="path/font-awesome-4.5.0/css/font-awesome.min.css">
+    
+    <!--google map-->
+    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+    
+    <script>
+        function init_map(){
+            var myOptions = {
+                zoom:15,
+                center:new google.maps.LatLng(14.076890, 100.601661),
+                mapTypeId: google.maps.MapTypeId.TERRAIN
+            };
+            
+            map = new google.maps.Map(document.getElementById('googlemap'), myOptions);
+            marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(14.076890, 100.601661)});
+            infowindow = new google.maps.InfoWindow({content:'<strong>NECTEC</strong><br>Pathumtani, Thailand<br>'});
+            google.maps.event.addListener(marker, 'click', function(){
+                infowindow.open(map, marker);
+            });
+            infowindow.open(map, marker);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+</head>
+<body>
+    <nav>
+        <img class="nav-logo" src="img/nectec-logo.jpg">
+    </nav>
+    
+    <div class="container">
+        <p class="text-headline">แผนที่แสดงพื้นที่เสี่ยง</p>
+        <div id="googlemap"></div>
+    </div><!--/.container-->
+    
+    <div class="dot-update"></div>
+    <div class="iconbar">
+        <a class="active" href="map.html"><i class="fa fa-globe"></i><p class="text-caption">แผนที่</p></a>
+        <a class="" href="graph.html"><i class="fa fa-pie-chart"></i><p class="text-caption">กราฟ</p></a>
+        <a class="" href="pollution.html"><i class="fa fa-cloud"></i><p class="text-caption">แจ้งเตือน</p></a>
+        <a class="" href="care.html"><i class="fa fa-medkit"></i><p class="text-caption">สุขภาพ</p></a>
+        <a class="" href="user.html"><i class="fa fa-user"></i><p class="text-caption">ผู้ใช้งาน</p></a>
+    </div><!--/.icon-bar-->
+</body>
+    <!--jquery-->
+    <script src="js/jquery-2.2.2.min.js"></script>
+    
+    <!--js-->
+    <script src="js/script.js"></script>
+</html>
